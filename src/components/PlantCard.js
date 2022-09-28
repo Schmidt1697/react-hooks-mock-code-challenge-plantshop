@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
-function PlantCard() {
+function PlantCard({ plant }) {
+  //state
+  const [isOutOfStock, setisOutOfStock] = useState(false)
+
+  const handleStockBtn = () => {
+    return (
+      setisOutOfStock(isOutOfStock => !isOutOfStock)
+    )
+  }
+ 
+  const className = isOutOfStock ? '' : 'primary';
+  const btnText = isOutOfStock ? 'Out of stock': 'In Stock'
+
   return (
     <li className="card">
-      <img src={"https://via.placeholder.com/400"} alt={"plant name"} />
-      <h4>{"plant name"}</h4>
-      <p>Price: {"plant price"}</p>
-      {true ? (
-        <button className="primary">In Stock</button>
-      ) : (
-        <button>Out of Stock</button>
-      )}
+      <img src={plant.image} alt={"plant name"} />
+      <h4>{plant.name}</h4>
+      <p>Price: {plant.price}</p>
+        <button onClick={handleStockBtn} className={className}>{btnText}</button>
+     
     </li>
   );
 }
 
 export default PlantCard;
+
