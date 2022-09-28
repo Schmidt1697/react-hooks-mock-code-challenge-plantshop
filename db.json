@@ -41,6 +41,18 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "cutie patootie",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/4/2019/03/GettyImages-658291850-c811524.jpg",
+      "price": "7.00",
+      "id": 8
+    },
+    {
+      "name": "ANOTHER CUTIE",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/4/2019/03/GettyImages-658291850-c811524.jpg",
+      "price": "8.00",
+      "id": 9
     }
   ]
 }

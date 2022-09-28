@@ -31,9 +31,16 @@ function NewPlantForm({ onAddNewPlant }) {
       price: plantPrice
     }
     onAddNewPlant(newPlant)
+    //send new plant to db
+      fetch("http://localhost:6001/plants", {
+        method:"POST",
+        headers:{
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newPlant) 
+      })
+      .then(res => res.json())
   }
-
-  //
 
   return (
     <div className="new-plant-form">
